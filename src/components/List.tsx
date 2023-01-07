@@ -5,6 +5,7 @@ export interface Iprops {
   people: Props["people"]
 } 
 
+
 const List : React.FC<Iprops> = ({ people }) => {
   return (
    <ul>

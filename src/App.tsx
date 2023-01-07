@@ -3,7 +3,6 @@ import logo from "./logo.svg";
 import "./App.css";
 import List from "./components/List";
 
-
 export interface IState {
   people: {
     name: string;

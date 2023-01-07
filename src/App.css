@@ -37,8 +37,6 @@
   }
 }
 
-
-
 .List {
   list-style: none;
   display: flex;
@@ -70,6 +68,7 @@
   width: 30%;
   text-align: left;
 }
+
 
 .AddToList {
   display: flex;
