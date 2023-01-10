@@ -1,18 +1,20 @@
-import React, { useState } from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import List from "./components/List";
+import React, { useState } from 'react';
+import './App.css';
+import List from './components/List';
+import AddToList from './components/AddToList';
 
 export interface IState {
   people: {
-    name: string;
-    age: number;
-    img: string;
-    note?: string;
-  }[];
+      name: string
+      age: number
+      img: string
+      note?: string
+  }[]
 }
 
+
 function App() {
+
   const [people, setPeople] = useState<IState["people"]>([
     {
       name: "LeBron James",
@@ -23,14 +25,15 @@ function App() {
     {
       name: "Kobe Bryant",
       age: 42,
-      img: "https://fullpresscoverage.com/wp-content/uploads/2020/01/101524695-457220551.jpg",
-    },
-  ]);
+      img: "https://fullpresscoverage.com/wp-content/uploads/2020/01/101524695-457220551.jpg"
+    }
+  ])
 
   return (
     <div className="App">
       <h1>People Invited to my Party</h1>
       <List people={people}/>
+      <AddToList setPeople={setPeople} people={people}/>
     </div>
   );
 }
